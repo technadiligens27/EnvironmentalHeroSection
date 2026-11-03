@@ -1,0 +1,299 @@
+
+/* ==========================================
+   DESKTOP / LAPTOP
+========================================== */
+
+.hero-section {
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+
+  background-image: url("./hero-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* HERO CONTENT 01 */
+
+.hero-section-content {
+  position: absolute;
+  top: 17%;
+  left: 5%;
+  z-index: 99;
+}
+
+.hero-section-content h1 {
+  width: 1000px;
+  font-size: 55px;
+  line-height: 127%;
+  color: #2B5715;
+}
+
+.hero-section-content p,
+.hero-section-content-02 p {
+  width: 300px;
+  padding-top: 12px;
+  padding-left: 0.5%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 174%;
+  color: #063900;
+}
+
+/* BUTTONS */
+
+.hero-btn-container {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  z-index: 9999999;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 34px;
+}
+
+.hero-btn-container button {
+  width: 170px;
+  height: 46px;
+  border: none;
+  border-radius: 13px;
+
+  background-color: #6B9D23;
+  box-shadow: 0 4px 33px rgba(0, 0, 0, 0.25);
+
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.hero-btn-container button:hover {
+  transform: scale(1.05);
+}
+
+.hero-btn-container .hero-btn-2 {
+  background-color: white;
+  color: #6B9D23;
+  border: 2px solid #6B9D23;
+}
+
+/* HERO CONTENT 02 */
+
+.hero-section-content-02 {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  z-index: 9999;
+}
+
+.hero-section-content-02 h1 {
+  width: 600px;
+  font-size: 55px;
+  line-height: 127%;
+  color: #2B5715;
+}
+
+/* ==========================================
+   TABLET — 769px to 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: 900px;
+    overflow: hidden;
+  }
+
+  .hero-section-content {
+    top: 12%;
+    left: 6%;
+    right: 6%;
+  }
+
+  .hero-section-content h1 {
+    width: 100%;
+    max-width: 750px;
+    font-size: 46px;
+    line-height: 125%;
+  }
+
+  .hero-section-content p,
+  .hero-section-content-02 p {
+    width: 100%;
+    max-width: 350px;
+    font-size: 16px;
+    line-height: 165%;
+  }
+
+  .hero-btn-container {
+    top: 39%;
+    left: 6%;
+    padding-top: 0;
+  }
+
+  .hero-btn-container button {
+    width: 155px;
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .hero-section-content-02 {
+    top: 65%;
+    left: 45%;
+    right: 5%;
+  }
+
+  .hero-section-content-02 h1 {
+    width: 100%;
+    font-size: 42px;
+    line-height: 125%;
+  }
+}
+
+/* ==========================================
+   MOBILE — 481px to 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 100dvh;
+    height: auto;
+    padding: 70px 6% 80px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .hero-section-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+
+    width: 100%;
+    padding-top: 20px;
+    z-index: 2;
+  }
+
+  .hero-section-content h1 {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+
+    font-size: 27px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .hero-section-content p {
+    width: 70%;
+    max-width: 430px;
+    margin: auto;
+    padding-top: 14px;
+    padding-left: 0;
+
+    font-size: 14px;
+    line-height: 165%;
+    text-align: center;
+  }
+
+  .hero-btn-container {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+    width: 100%;
+    padding: 0;
+    z-index: 9999;
+  }
+
+  .hero-btn-container button {
+    width: 155px;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .hero-section-content-02 {
+    display: none;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE — 361px to 480px
+========================================== */
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 65px 6%;
+    gap: 22px;
+  }
+
+  .hero-section-content h1 {
+    font-size: 25px;
+  }
+
+  .hero-section-content p {
+    width: 100%;
+    max-width: 320px;
+    padding-top: 12px;
+    font-size: 16px;
+    line-height: 170%;
+  }
+
+  .hero-btn-container {
+    gap: 10px;
+  }
+
+  .hero-btn-container button {
+    width: 145px;
+    height: 44px;
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 11px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE — 360px and below
+========================================== */
+
+@media (max-width: 360px) {
+  .hero-section-content h1 {
+    font-size: 20px;
+  }
+
+  .hero-section-content p {
+    font-size: 13px;
+  }
+
+  .hero-btn-container {
+    top: 75%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-btn-container button {
+    width: 170px;
+    height: 43px;
+  }
+}
