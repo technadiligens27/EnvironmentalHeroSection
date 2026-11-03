@@ -1,11 +1,5 @@
-import {
-  useLayoutEffect,
-  useRef,
-} from "react"
-
-import {
-  gsap,
-} from "gsap"
+import {useLayoutEffect,useRef} from "react"
+import {gsap} from "gsap"
 
 import Experience from "../Experience/Experience"
 
@@ -13,12 +7,11 @@ import "./HeroSection.css"
 
 const HeroSection = () => {
   const heroRef = useRef(null)
-
   const contentRef = useRef(null)
-
   const buttonsRef = useRef(null)
-
   const content02Ref = useRef(null)
+
+const heroBg = `${import.meta.env.BASE_URL}hero-bg.svg`;
 
   useLayoutEffect(() => {
     const context = gsap.context(() => {
@@ -101,6 +94,9 @@ timeline.from(
     <section
       className="hero-section"
       ref={heroRef}
+      style={{
+        backgroundImage: `url(${heroBg})`,
+      }}
     >
       <div
         className="hero-section-content"
